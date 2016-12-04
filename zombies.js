@@ -352,6 +352,14 @@ class Zombie{
  * @param {number} speed            The zombie's speed.
  */
 
+class FastZombie extends Zombie{
+  constructor(health, strength, speed){
+    super(Zombie);
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+  }
+}
 
 /**
  * FastZombie Extends Zombie Class
