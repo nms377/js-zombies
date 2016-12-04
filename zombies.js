@@ -252,6 +252,19 @@ equip(itemToEquip){
  * @param {Food} itemToEat  The food item to eat.
  */
 
+eat(itemToEat){
+  if(itemToEat instanceof Food){  //is item food?
+    if(this._pack.indexOf(itemToEat) > -1){ //is item in the pack?
+
+      this._pack.splice(this._pack.indexOf(itemToEat), 1);  //remove item from pack
+      if(this.health + itemToEat.energy > this.getMaxHealth()){
+        this.health = this._maxHealth;
+      }else{
+        this.health = itemToEat.energy;
+      }
+    }
+  }  
+}
 
 /**
  * Player Class Method => useItem(item)
