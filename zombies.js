@@ -159,8 +159,10 @@ takeItem(item){
     if (this._pack.length < 3){
         this._pack.push(item);
         console.log(this.name + ' added ' + item + ' to their pack.');
+        return true;
     }else{
       console.log(this.name + '\'s pack is full so ' + item + ' cannot be stored.');
+      return false;
     }
 }
 
@@ -221,6 +223,15 @@ discardItem(item){
  * @param {Weapon} itemToEquip  The weapon item to equip.
  */
 
+equip(itemToEquip){
+  if(this._pack.indexOf(itemToEquip) > -1){ //if item is in pack
+    if(itemToEquip instanceof Weapon){  // if item is a Weapon
+      this.takeItem(this.equipped); //then set equipped to false because you're not
+      this.equipped = itemToEquip;  //equipped property is set to item
+      this._pack.splice(this._pack.indexOf(itemToEquip), 1);  //remove item from the pack
+    }
+  }
+}
 
 /**
  * Player Class Method => eat(itemToEat)
