@@ -190,6 +190,16 @@ takeItem(item){
  * @return {boolean} true/false     Whether player was able to remove item from pack.
  */
 
+discardItem(item){
+  if(this._pack.indexOf(item) === -1){
+    console.log(item + ' was not found.');
+    return false;
+  }else{
+    this._pack.splice(this._pack.indexOf(item), 1);
+    console.log(item + ' was discarded from ' + this.name + '\'s pack.');
+    return true;
+  }
+}
 
 /**
  * Player Class Method => equip(itemToEquip)
