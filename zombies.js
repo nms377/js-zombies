@@ -419,7 +419,14 @@ class StrongZombie extends Zombie{
  * -----------------------------
  */
 
-
+class RangedZombie extends Zombie{
+  constructor(health, strength, speed){
+    super(Zombie);
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+  }
+}
 
 /**
  * Class => ExplodingZombie(health, strength, speed)
