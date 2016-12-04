@@ -101,13 +101,21 @@ class Food extends Item{
 class Player extends Item{
   constructor(name, health, strength, speed){
     super(name);
+    this._pack = [];
+    this._maxHealth = health;
     this.health = health;
     this.strength = strength;
     this.speed = speed;
     this.isAlive = true;
     this.equipped = false;
+    this.getPack = function(){
+      return this._pack;
+    };
+    this.getMaxHealth = function(){
+      return this._maxHealth;
+    };
   }
-}
+
 
 /**
  * Player Class Method => checkPack()
@@ -121,6 +129,11 @@ class Player extends Item{
  * @name checkPack
  */
 
+checkPack(){
+  console.log(this.getPack);
+}
+
+}
 
 /**
  * Player Class Method => takeItem(item)
@@ -236,7 +249,6 @@ class Player extends Item{
  * @name equippedWith
  * @return {string/boolean}   Weapon name or false if nothing is equipped.
  */
-
 
 
 /**
