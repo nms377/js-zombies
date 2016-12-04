@@ -260,7 +260,7 @@ eat(itemToEat){
       if(this.health + itemToEat.energy > this.getMaxHealth()){
         this.health = this._maxHealth;
       }else{
-        this.health = itemToEat.energy;
+        this.health = this.health + itemToEat.energy;
       }
     }
   }  
@@ -279,6 +279,13 @@ eat(itemToEat){
  * @param {Item/Weapon/Food} item   The item to use.
  */
 
+useItem(item){
+  if(item instanceof Weapon){
+    this.equip(item);
+  }else if(item instanceof Food){
+    this.eat(item);
+  }
+}
 
 /**
  * Player Class Method => equippedWith()
