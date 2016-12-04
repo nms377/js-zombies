@@ -301,6 +301,15 @@ useItem(item){
  * @return {string/boolean}   Weapon name or false if nothing is equipped.
  */
 
+ equippedWith(){
+    if(this.equipped === false){
+    console.log('No weapon available.');
+    return false;
+  }else{
+    return this.equipped.name;
+  }
+}
+
 }
 /**
  * Class => Zombie(health, strength, speed)
