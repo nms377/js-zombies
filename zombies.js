@@ -33,20 +33,18 @@ class Item{
  * @property {number} damage
  */
 
-class Weapon extends Item{
-  constructor(name, damage){
-    super(name);
-    this.damage = damage;
-  }
-}
-
 
 /**
  * Weapon Extends Item Class
  * -----------------------------
  */
 
-
+class Weapon extends Item{
+  constructor(name, damage){
+    super(name);
+    this.damage = damage;
+  }
+}
 
 /**
  * Class => Food(name, energy)
@@ -71,6 +69,12 @@ class Weapon extends Item{
  */
 
 
+class Food extends Item{
+  constructor(name, energy){
+    super(name);
+    this.energy = energy;
+  }
+}
 
 /**
  * Class => Player(name, health, strength, speed)
