@@ -24,6 +24,10 @@ describe('Weapon', () =>{
 		weapon.should.be.a.function;
 	});
 
+	it('should have an argument called damage', () =>{
+		weapon.should.have.argument('damage');
+	});
+
 	it('should have a damage', () => {
 		weapon.should.have.property('damage');
 	});
