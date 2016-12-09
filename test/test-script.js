@@ -18,18 +18,18 @@ describe('Item', () =>{
 
 describe('Weapon', () =>{
 
-	let weapon = Zombies.weapon;
+	let weapon = new Zombies.weapon;
 
 	it('should be a class', () => {
 		weapon.should.be.a.function;
 	});
 
-	it('should have an argument called damage', () =>{
+	it('should have argument damage', () =>{
 		weapon.should.be.a.argument;
 	});
 
 	it('should have a damage', () => {
-		weapon.should.be.a.property('damage');
+		weapon.should.have.property('damage');
 	});
 
 });
