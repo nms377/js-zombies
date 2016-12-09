@@ -25,7 +25,7 @@ describe('Weapon', () =>{
 	});
 
 	it('should have an argument called damage', () =>{
-		weapon.should.have.argument('damage');
+		weapon.should.be.a.argument;
 	});
 
 	it('should have a damage', () => {
