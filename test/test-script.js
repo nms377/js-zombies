@@ -29,7 +29,7 @@ describe('Weapon', () =>{
 	});
 
 	it('should have a damage', () => {
-		weapon.should.have.property('damage');
+		weapon.should.have.ownProperty('damage');
 	});
 
 });
