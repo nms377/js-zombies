@@ -20,6 +20,10 @@ describe('Weapon', () =>{
 
 	let weapon = new Zombies.weapon;
 
+	it('should extend from Item class', () =>{
+		weapon.should.be.an.instanceof(Item);
+	});
+
 	it('should be a class', () => {
 		weapon.should.be.a.function;
 	});
