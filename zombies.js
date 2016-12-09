@@ -38,8 +38,8 @@ class Item{
  */
 
 class Weapon{
-  constructor(){
-    
+  constructor(damage){
+    this.damage = damage;
   }
 }
 
