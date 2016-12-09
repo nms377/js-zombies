@@ -1,3 +1,5 @@
+/*jshint esversion: 6*/
+
 /**
  * Class => Item(name)
  * -----------------------------
@@ -9,8 +11,7 @@
  */
 
 class Item{
-  constructor(string){
-
+  constructor(){
   }
 }
 
@@ -36,7 +37,11 @@ class Item{
  * -----------------------------
  */
 
-
+class Weapon{
+  constructor(){
+    
+  }
+}
 
 /**
  * Class => Food(name, energy)
@@ -367,5 +372,6 @@ function runGame() {
 }
 
 module.exports = {
-  item: Item
+  item: Item,
+  weapon: Weapon
 };
